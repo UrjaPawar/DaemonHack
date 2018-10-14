@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instascan</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="../check-me/instascan.min.js"></script>
+  </head>
+  <body style="background-color: rgb(255, 252, 240);">
+    <div id="judge-header-title" class="w3-container" style="text-align: center;">
+      <h2>Please Scan the Hackathon QR Code</h2>
+    </div>
+
+    <div id="logout-button" style="display: none;">
+      <button class="w3-btn w3-round-large w3-display-topright" style="margin-top: 2%; margin-right: 2%; background-color: darkolivegreen" onclick="OnLogOutPressed()">Logout</button>
+    </div>
+
+    <div style="padding: 3% 25%;">
+      <div id="video-preview", style="display: block;">
+        <video id="preview" class="w3-border w3-round-large" style="display: block;"></video>
+      </div>
+
+      <div id="team-hash-id" style="display: none">
+        <h2>Team Hash ID : </h2>
+      </div>
+
+      <div id="scoring-buttons-id" style="display: none">
+          <button class="w3-btn w3-circle" style="margin-top: 2%; background-color: darkolivegreen;width: 60px;height: 60px;" onclick="OnScoreButtonClicked(15)">15</button>
+          <button class="w3-btn w3-circle" style="margin-top: 2%; background-color: darkolivegreen;width: 60px;height: 60px;" onclick="OnScoreButtonClicked(30)">30</button>
+          <button class="w3-btn w3-circle" style="margin-top: 2%; background-color: darkolivegreen;width: 60px;height: 60px;" onclick="OnScoreButtonClicked(50)">50</button>
+      </div>
+
+    </div>
+
+
+    <script src="judgeScan.js"></script>
+  </body>
+</html>
