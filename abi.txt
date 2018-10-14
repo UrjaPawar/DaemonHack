@@ -1,1 +1,348 @@
- { "constant": true, "inputs": [], "name": "allocatedTokens", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [ { "name": "_add", "type": "address" }, { "name": "_score", "type": "uint256" } ], "name": "addParticipant", "outputs": [ { "name": "ok", "type": "bool" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [], "name": "endHackathon", "outputs": [ { "name": "ok", "type": "bool" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_url", "type": "bytes32" } ], "name": "newParticipant", "outputs": [ { "name": "ok", "type": "bool" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "hackathonName", "outputs": [ { "name": "", "type": "bytes32" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [], "name": "endRegistration", "outputs": [ { "name": "ok", "type": "bool" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [], "name": "distributePrize", "outputs": [ { "name": "ok", "type": "bool" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": false, "inputs": [ { "name": "_add", "type": "address" }, { "name": "_tokens", "type": "uint256" } ], "name": "allocateTokens", "outputs": [ { "name": "ok", "type": "bool" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "edition", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "totalParticipants", "outputs": [ { "name": "", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [ { "name": "_add", "type": "address" } ], "name": "getScore", "outputs": [ { "name": "_score", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [ { "name": "_add", "type": "address" } ], "name": "getUrl", "outputs": [ { "name": "", "type": "bytes32" } ], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "_add", "type": "address" }, { "indexed": false, "name": "_score", "type": "uint256" } ], "name": "PartcipantAdded", "type": "event" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "_add", "type": "address" }, { "indexed": false, "name": "_tokens", "type": "uint256" } ], "name": "TokensAllocated", "type": "event" } ]
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_add",
+				"type": "address"
+			}
+		],
+		"name": "addParticipant",
+		"outputs": [
+			{
+				"name": "ok",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_add",
+				"type": "address"
+			},
+			{
+				"name": "_tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "allocateTokens",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "distributePrize",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "endHackathon",
+		"outputs": [
+			{
+				"name": "ok",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "endRegistration",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_add",
+				"type": "address"
+			}
+		],
+		"name": "getUrl",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_url",
+				"type": "bytes32"
+			}
+		],
+		"name": "newParticipant",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_add",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_url",
+				"type": "bytes32"
+			}
+		],
+		"name": "PartcipantAdded",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "setAllocatedTokens",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_edition",
+				"type": "uint256"
+			}
+		],
+		"name": "setEdition",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_name",
+				"type": "bytes32"
+			}
+		],
+		"name": "setHackName",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_number",
+				"type": "uint256"
+			}
+		],
+		"name": "setParticipants",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_score",
+				"type": "uint256"
+			}
+		],
+		"name": "setScores",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "tokenRequest",
+		"outputs": [
+			{
+				"name": "tokentoRequest",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_add",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "TokensAllocated",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "allocatedTokens",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "edition",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "finalIndex",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_add",
+				"type": "address"
+			}
+		],
+		"name": "getScore",
+		"outputs": [
+			{
+				"name": "_score",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "hackathonName",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "index",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "totalParticipants",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+
+Address:
+0xc4e8e9bed07f5db202c197fd5c73ccb736f06f9d
